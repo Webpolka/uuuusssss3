@@ -436,6 +436,12 @@
 			min-height: 280px;
 			background: linear-gradient(180deg, #fff 0%, #96b292 100%);
 		}
+		&_top-2 {
+			border-radius: 40px;
+			width: 100%;
+			min-height: 280px;
+			background: linear-gradient(180deg, #fff 0%, #9098d0 100%);
+		}
 
 		// Нижний контейнер с элементами
 		&_bottom {
@@ -504,6 +510,11 @@
 	&-sidebar {
 		margin-right: 40px;
 		background: linear-gradient(0deg, #fff 0%, #96b292 100%);
+		border-radius: 40px 40px 0 0;
+	}
+	&-sidebar-2 {
+		margin-right: 40px;
+		background: linear-gradient(0deg, #fff 0%, #9098d0 100%);
 		border-radius: 40px 40px 0 0;
 	}
 
@@ -586,7 +597,7 @@
 			}
 		}
 		&-prompt-2 {
-			p {			
+			p {
 				font-weight: 500;
 				font-size: 15px;
 				line-height: 120%;
@@ -594,6 +605,10 @@
 
 				padding-bottom: 30px;
 			}
+		}
+		&-prompt-22 {
+			transform: translateX(-20px);
+
 		}
 	}
 

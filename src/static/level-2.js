@@ -29,6 +29,7 @@ class Hack {
 					fourth: "Он красавец, я в восторге!",
 					five: "Ставлю бюдильник на 6:30. Утро лучшее время суток. Кто со мной?",
 					six: "Вдохновляющие мелочи вокруг",
+					seven: "г. Казань",
 				},
 			},
 			check: {
@@ -86,6 +87,7 @@ class Hack {
 			fourth: null,
 			five: null,
 			six: null,
+			seven: null,
 		};
 
 		this.lastScore = 0;
@@ -250,8 +252,8 @@ class Hack {
 		} else {
 			return;
 		}
-		this.uselessBlank[key] = -1;
-		this.lastScore = -1;
+		this.uselessBlank[key] = -5;
+		this.lastScore = -5;
 
 		console.log(this.uselessBlank);
 	}
@@ -414,7 +416,7 @@ class Hack {
 				const value = obj[key];
 				if (typeof value === "string") {
 					console.log(value);
-					concated += "<li>" + value + " балл</li>";
+					concated += "<li>" + value + " баллов</li>";
 				}
 			}
 		}
@@ -456,7 +458,7 @@ class Hack {
 
 		const scoreEl = document.querySelector("#score");
 		const basicEl = document.querySelector("#basic");
-		const extraEl = document.querySelector("#extra");
+		// const extraEl = document.querySelector("#extra");
 		const tileEl = document.querySelector("#tile");
 		const uselessEl = document.querySelector("#useless");
 
@@ -465,12 +467,12 @@ class Hack {
 		const winContentFail = document.querySelector("#content-fail");
 
 		const basicList = this.concatAchivments(checkObj);
-		const extraList = this.concatAchivments(scoresObj);
+		// const extraList = this.concatAchivments(scoresObj);
 		const uselessList = this.concatAchivmentsUseless(uselessObj);
 
 		const basic = basicList ? `${basicList}` : "<li>Ничего</li>";
-		const extra = extraList ? `${extraList}` : "<li>E-mail - не найден</li>";
-		const uless = uselessList ? `<ul>${uselessList}</ul>` : "</ul><li>Ничего лишнего, ОК !</li></ul>";
+		// const extra = extraList ? `${extraList}` : "<li>E-mail - не найден</li>";
+		const uless = uselessList ? `<ul>${uselessList}</ul>` : "<ul><li>Ничего лишнего, ОК !</li></ul>";
 
 		const footerSucces = `
                             <p>Письмо от “команды хакеров”</p>
@@ -478,39 +480,28 @@ class Hack {
                                 <strong>Хорошая работа, но будь внимательнее.</strong> <br />
                                Мы получили почти всё, что нужно, но ты потратил время на лишние вещи. Представь, если бы на кону была настоящая операция — каждая минута и каждый клик на счету.<br />
                                Жертва понятия не имеет, как легко ты вытащил её личные данные..<br />
-                            </p>
-                            <p class="small">
-                            <strong>Заметка на будущее:</strong><br/>
-                                Один пост с номером телефона + один с датой рождения = сброс пароля.<br />
-                                А если ещё и кот по имени — то это, скорее всего, секретный вопрос.</br>
-                                 Не забывай: e-mail, даже старый, — ключ ко всему. Он может восстановить доступ к десяткам сервисов.<br/>                                
-                                 </p>
-                            <p class="small pn">
-                            <strong>Подсказка:</strong><br/>
-                                Переходишь на новый уровень. </br>
-                                Теперь тебе придётся распутывать цепочки: информация не всегда будет прямой.<br />                                
-                                Попробуй найти связи между комментарием, фото и датой. Это уже не квест, а настоящее расследование.</br>                                
                             </p>`;
 		const footerMiss = `
                             <p>Письмо от “команды хакеров”</p>
                             <p class="small">
                                 Здесь немного посложнее, но ты справишся ! <br />
-                                Попробуй быть чуть внимательнее. Набери хотя бы 50 баллов.</br>
+                                Попробуй быть чуть внимательнее. Набери хотя бы 30 баллов.</br>
                                 Ты должен четко понимать что тебе нужно искать !																
                             </p>
                             <p class="small pn">
                                 Если не вышло с первого раза — ничего страшного, просто попробуй ещё раз.
-                            </p>`;
+								</p>`;
 
 		scoreEl.textContent = score;
 		basicEl.innerHTML = basic;
 
-		extraEl.innerHTML = extra;
+		// extraEl.innerHTML = extra;
 
 		if (this.hasOwnValue(this.uselessBlank)) {
 			const uselessSum = this.showUselessSum();
 			let htmlUseless = "";
 			htmlUseless += `<p>Ненужные данные (минус ${uselessSum} баллов):</p>`;
+			// htmlUseless += `<p>Ненужные данные :</p>`;
 			htmlUseless += uless;
 			htmlUseless += `<p class="index-up">❗ Помни: всё, что не ведёт к уязвимостям, только отвлекает. Учись фильтровать шум.</p>`;
 
@@ -518,7 +509,7 @@ class Hack {
 		}
 
 		if (tileEl && winContentSucces && winContentFail)
-			if (this.hasOwnValue(this.checkBlank) && Number(this.showScore()) >= 50) {
+			if (this.hasOwnValue(this.checkBlank) && Number(this.showScore()) >= 30) {
 				tileEl.innerHTML = footerSucces;
 				winContentSucces.style.display = "block";
 			} else {
@@ -566,10 +557,10 @@ const newHack = new Hack(".post", {
 			town: "С каждым годом всё больше люблю Питер — за утренние набережные, кофе на углу и бесконечный ветер. Иногда раздражает, но всё равно — это мой город.",
 		},
 		scores: {
-			one: "У меня один пароль на всё. Иначе я бы вообще нигде не входила.",
-			two: "Отправляюсь в путешествие",
-			three: "г. Казань", // чтобы убрать из обслуживания измени содержимое например "город Казань"
-			four: "Пиши в телегу или на старую почту: masha.vetrov@oldmail.com или landcorobka@gmail.com",
+			one: "Nothing else matters",
+			two: "Nothing else matters",
+			three: "Nothing else matters", // чтобы убрать из обслуживания измени содержимое например "город Казань"
+			four: "Nothing else matters",
 		},
 		useless: {
 			first: "У кого есть хороший рецепт чизкейка без сахара?",
@@ -578,6 +569,7 @@ const newHack = new Hack(".post", {
 			fourth: "Он красавец, я в восторге!",
 			five: "Ставлю бюдильник на 6:30. Утро лучшее время суток. Кто со мной?",
 			six: "Вдохновляющие мелочи вокруг",
+			seven: "г. Казань",
 		},
 	},
 	check: {

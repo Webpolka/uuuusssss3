@@ -71,29 +71,36 @@
 .btn-transparent {
 	background-color: transparent;
 	color: var(--black-text);
-	&:hover {
-		background-color: #bfd6b5;
-	}
+	// &:hover {
+	// 	background-color: #bfd6b5;
+	// }
+}
+.btn-transparent-2 {
+	background-color: transparent;
+	color: var(--black-text);
+	// &:hover {
+	// 	background-color: #c6c6e7;
+	// }
 }
 
 .btn-fill {
 	background-color: #52856a;
 	color: white;
 
-	&:hover {
-		background-color: #148147;
-	}
+	// &:hover {
+	// 	background-color: #148147;
+	// }
 }
 .btn-fill-2 {
 	background-color: #1f1687;
 	color: white;
 
-	&:hover {
-		background-color: #09043f;
-	}
+	// &:hover {
+	// 	background-color: #09043f;
+	// }
 }
-
-.btn-widget {
+.btn-widget,
+.btn-widget-2 {
 	display: flex;
 	justify-content: center;
 
@@ -106,10 +113,21 @@
 
 	min-height: 31px;
 	padding: 5px 0;
+}
+.btn-widget {
 	background: #96b292;
 }
+.btn-widget-2 {
+	margin-top: 30px;
+	margin-inline: auto;
+	max-width: 173px;
+	background: #C6C6E7;
+	border: 1px solid #C6C6E7;
+}
 
-.btn-like {
+.btn-like,
+.like {
+	display: block;
 	width: 44px;
 	height: 43px;
 	background-image: url("../../icons/heart-transparentr.svg");
@@ -120,7 +138,9 @@
 	}
 }
 
-.btn-like-2 {
+.btn-like-2,
+.like-2 {
+	display: block;
 	width: 44px;
 	height: 43px;
 	background-image: url("../../icons/heart-transparentr-2.svg");

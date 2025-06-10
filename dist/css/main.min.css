@@ -314,27 +314,24 @@ body {
   background-color: transparent;
   color: var(--black-text);
 }
-.btn-transparent:hover {
-  background-color: #bfd6b5;
+
+.btn-transparent-2 {
+  background-color: transparent;
+  color: var(--black-text);
 }
 
 .btn-fill {
   background-color: #52856a;
   color: white;
 }
-.btn-fill:hover {
-  background-color: #148147;
-}
 
 .btn-fill-2 {
   background-color: #1f1687;
   color: white;
 }
-.btn-fill-2:hover {
-  background-color: #09043f;
-}
 
-.btn-widget {
+.btn-widget,
+.btn-widget-2 {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -345,28 +342,45 @@ body {
   color: #fff;
   min-height: 31px;
   padding: 5px 0;
+}
+
+.btn-widget {
   background: #96b292;
 }
 
-.btn-like {
+.btn-widget-2 {
+  margin-top: 30px;
+  margin-inline: auto;
+  max-width: 173px;
+  background: #C6C6E7;
+  border: 1px solid #C6C6E7;
+}
+
+.btn-like,
+.like {
+  display: block;
   width: 44px;
   height: 43px;
   background-image: url("../icons/heart-transparentr.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.btn-like.active {
+.btn-like.active,
+.like.active {
   background-image: url("../icons/heart-fill.svg");
 }
 
-.btn-like-2 {
+.btn-like-2,
+.like-2 {
+  display: block;
   width: 44px;
   height: 43px;
   background-image: url("../icons/heart-transparentr-2.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.btn-like-2.active {
+.btn-like-2.active,
+.like-2.active {
   background-image: url("../icons/heart-fill.svg");
 }
 
@@ -770,6 +784,12 @@ body {
   min-height: 280px;
   background: linear-gradient(180deg, #fff 0%, #96b292 100%);
 }
+.profile-header_top-2 {
+  border-radius: 40px;
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(180deg, #fff 0%, #9098d0 100%);
+}
 .profile-header_bottom .bottom-grid {
   display: grid;
   grid-template-columns: 210fr 560fr 230fr;
@@ -819,6 +839,11 @@ body {
 .profile-sidebar {
   margin-right: 40px;
   background: linear-gradient(0deg, #fff 0%, #96b292 100%);
+  border-radius: 40px 40px 0 0;
+}
+.profile-sidebar-2 {
+  margin-right: 40px;
+  background: linear-gradient(0deg, #fff 0%, #9098d0 100%);
   border-radius: 40px 40px 0 0;
 }
 .profile .widget {
@@ -887,6 +912,9 @@ body {
   line-height: 120%;
   color: #1f1687;
   padding-bottom: 30px;
+}
+.profile .widget-prompt-22 {
+  transform: translateX(-20px);
 }
 .profile-content {
   border-radius: 40px 40px 0 0;
@@ -1238,13 +1266,14 @@ Extra styles for level 2
   padding: 60px 120px;
   max-width: 938px;
   min-height: 148px;
-  background: linear-gradient(180deg, #f89061 0%, #ffa57c 50%);
-  background-size: 100% 200%;
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(90deg, #f89061, #ffc1a3, #f87040, #f89061);
+  background-size: 200%;
+  transition: transform 0.3s ease;
   margin-inline: auto;
 }
 .popup-callback_btn:hover {
-  animation: gradientAnimation 1s ease infinite;
+  animation: shimmer 2s linear infinite;
+  transform: translateY(-2px);
 }
 @keyframes gradientAnimation {
   0% {
@@ -1255,6 +1284,14 @@ Extra styles for level 2
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
   }
 }
 .popup-callback_btn span {
@@ -1293,6 +1330,13 @@ Extra styles for level 2
   content: "·";
   margin-right: 15px;
 }
+.popup-callback .strong {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  color: #000;
+  display: block;
+}
 .popup-callback .pb-60 {
   padding-bottom: 130px;
 }
@@ -1300,6 +1344,9 @@ Extra styles for level 2
   content: "+";
   margin-left: 16px;
   margin-right: 16px;
+}
+.popup-callback .padding-top-100 {
+  padding-top: 100px;
 }
 .popup-callback .pn {
   padding: 0;
@@ -1317,6 +1364,26 @@ Extra styles for level 2
   max-width: 1300px;
   padding-top: 60px;
   padding-bottom: 80px;
+}
+.popup-callback p.next-laptop {
+  position: relative;
+  margin-inline: auto;
+  text-align: center;
+  max-width: 1300px;
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+.popup-callback p.next-laptop:after {
+  position: absolute;
+  content: "";
+  top: -60px;
+  right: 0;
+  width: 193px;
+  height: 164px;
+  background-image: url("../images/laptop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 .popup-callback .to-home {
   display: block;
