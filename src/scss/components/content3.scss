@@ -1,0 +1,29 @@
+/* -------------------------------------------------------------------------------------------------------------------------\
+Extra styles for level 2
+---------------------------------------------------------------------------------------------------------------------------*/
+
+.level_2_text {
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 90%;
+	color: #85b97b;
+}
+
+.game-rules_description {
+	.think {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 120%;
+
+		padding-top: 40px;
+	}
+}
+.hidden {
+	display: none;
+}
+.index-up {
+	position: relative;
+	z-index: 10;
+	margin-top: 60px;
+	margin-bottom: 80px;
+}

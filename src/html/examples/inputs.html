@@ -1,0 +1,84 @@
+<div class="container">
+    <form action="">
+        <div class="form-wrapper">
+            <!-- TEXTAREA -->
+            <div class="form-item comment-box">
+                <textarea name="comment" id="leave-comment" class="comment-box__area"
+                    placeholder="Введите текст отзыва"></textarea>
+                <span class="comment-box__counter">
+                    <span class="letters-counter">0</span>
+                    /
+                    <span class="letters-total">250</span>
+                </span>
+            </div>
+            <!-- INPUT ПАРОЛЬ С ГЛАЗИКОМ -->
+            <div class="form-item password">
+                <input class="form-input" type="password" name="password" id="password" placeholder="Пароль"
+                    autocomplete="off">
+
+                <button class="password-toggle" data-eyetoggle>
+                    <i class="icons_24_eye open-eye"></i>
+                </button>
+            </div>
+
+            <!-- INPUT ПОВТОРИТЕ ПАРОЛЬ -->
+            <div class="form-item" for="password-repeat">
+                <input class="form-input" type="password" name="password-repeat" id="password-repeat"
+                    placeholder="Повторите пароль" autocomplete="off">
+            </div>
+
+            <!-- CHECKBOX -->
+            <div class="form-item form-field space-between nowrap">
+                <span>Ответы в Сообществе</span>
+                <div class="form-checkbox">
+                    <input type="checkbox" name="answers" id="answers" checked>
+                    <label for="answers"></label>
+                </div>
+            </div>
+
+            <!-- CHECKBOX -->
+            <div class="form-item form-field space-between nowrap">
+                <span>Предложения вернуться в игру</span>
+                <div class="form-checkbox">
+                    <input type="checkbox" name="returns" id="returns">
+                    <label for="returns"></label>
+                </div>
+            </div>
+
+            <!-- RADIO -->
+            <div class="form-item form-field space-between">
+                <span>Кто может писать вам личные сообщения</span>
+                <div class="form-item-wrap">
+                    <div class="form-radio">
+                        <input type="radio" name="canwrite" id="everybody" checked>
+                        <label for="everybody">Все</label>
+                    </div>
+
+                    <div class="form-radio">
+                        <input type="radio" name="canwrite" id="friends">
+                        <label for="friends">Друзья</label>
+                    </div>
+
+                    <div class="form-radio">
+                        <input type="radio" name="canwrite" id="noeverybody">
+                        <label for="noeverybody">Никто</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CUSTOM MULTI SELECT "TomSelect"  -->
+            <div class="form-wrapper">
+                <select id="select-beast" multiply placeholder="Выбери чувака..." autocomplete="off">
+                    <option value="">Выбери чувака...</option>
+                    <option value="4">Thomas Edison</option>
+                    <option value="1">Nikola</option>
+                    <option value="3">Nikola Tesla</option>
+                    <option value="5">Arnold Schwarzenegger</option>
+                </select>               
+            </div>
+            
+        </div>
+    </form>
+
+</div>

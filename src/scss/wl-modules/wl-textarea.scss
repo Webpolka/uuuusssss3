@@ -1,0 +1,82 @@
+// ***************************************** JS **********************************************
+//
+// import TextArea from './wl-classes/wl-textarea.js';
+
+// const newCommentArea = new TextArea({
+//   element: '#leave-comment',
+//   counterSpan: '.letters-counter',
+//   maxLenght: 250
+// })
+// newCommentArea.listener();
+//
+//
+// **************************************** HTML ********************************************
+// <div class="comment-box form-item">
+//     <textarea name="comment" id="leave-comment" class="comment-box__area"
+//         placeholder="Введите текст отзыва"></textarea>
+//     <span class="comment-box__counter">
+//         <span class="counter-current">0</span>
+//         /
+//         <span class="counter-total">250</span>
+//     </span>
+// </div>
+// -------------------------- TEXTAREA INPUT в блоке ОСТАВИТЬ ОЦЕНКУ -------------------------
+.comment-box {
+    position: relative;
+    max-width: 100%;
+
+    &__area {
+        min-height: rem(250);
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 120%;
+        resize: none;
+
+        // border: 1px solid grey;
+        border-radius: var(--radius);
+        padding: rem(20);
+        width: 100%;
+        background-color: rgb(242, 242, 242);
+        border: 1px solid rgb(0, 0, 0, 0.25);
+        transition: border-color 0.3s ease-in-out;
+
+        color: rgb(0, 0, 0, 0.75);
+
+        &:focus {
+            border: 1px solid blue;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: rem(18);
+            line-height: 120%;
+            color: grey;
+        }
+    }
+
+    @include lg {
+        .comment-box_area {
+            font-size: rem(16);
+
+            &::placeholder {
+                font-size: rem(16);
+            }
+        }
+    }
+
+
+    &__counter {
+        position: absolute;
+        bottom: rem(20);
+        right: rem(20);
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 120%;
+        text-align: center;
+        color: blue;
+
+        @include lg {
+            font-size: rem(16);
+        }
+    }
+}

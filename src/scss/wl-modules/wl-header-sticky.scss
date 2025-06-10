@@ -1,0 +1,48 @@
+// ****************************** JS ****************************************
+//
+// ************************** Изменялка высоты шапки при скролинге ********************************
+// import HeaderStickyMinMax from './wl-classes/wl-header-sticky-minmax.js';
+// const newHeaderSticky = new HeaderStickyMinMax({
+//   header: '.header-sticky',           // Шапка
+//   minHeight: '60',                    // Минимальная высота шапки
+//   maxHeight: '100',                   // Максимальная высота шапки
+//   breakpoint: '50',                  // Точка при скроле когда срабатыввать скрипту
+//   stickySidebar: '.sidebar-sticky',   // Указываем липкий сайдбар если он есть !!!
+//
+//   // Дополнительные элементы внутри шапки, которые будут менять свои стили.
+//   logoElement: '.logo',               // Логотип
+//   navElement: '.header-nav'           // Навигация
+// });
+// newHeaderSticky.listener();
+//
+// ****************************** HTML ***************************************
+//
+// <header class="header-sticky">
+//     <div class="container full-height">
+//         <div class="header-row">
+//             <h1 class="logo">Logo</h1>
+
+//             <nav class="header-nav">
+//                 <ul class="menu">
+//                     <li><a href="#">Link-1</a></li>
+//                     <li><a href="#">Link-2</a></li>
+//                     <li><a href="#">Link-3</a></li>
+//                     <li><a href="#">Link-4</a></li>
+//                 </ul>
+//             </nav>
+//         </div>
+//     </div>
+// </header>
+//
+// ********************************* SCSS ***************************************
+.wrapper {
+    overflow: clip;
+}
+.header-sticky {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}

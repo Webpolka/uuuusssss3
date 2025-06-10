@@ -1,0 +1,112 @@
+// -------------------------------------- JS in myJsClasses/wl-scroll-animation.js --------------------------------
+//
+// ------------------------------------------------- АНИМАЦИЯ ПРИ СКРОЛЛЕ ОТ ВЕБЛЕГКО --------------------------------------------------
+// import {WLScrollAnimation} from './myJsClasses/wl-scroll-animation.js'
+
+// // ---------- анимация при скролле одного родительского элемента(вколонке) и всех дочерних с нарастающей задержкой(вряду)------------------
+// new WLScrollAnimation({
+//   point : 100,     // координаты по Y снизу на экране, когда начнет срабатывать скрипт(при скроле)
+//   delay : 25,     // нарастающая задержка (применяеться только для элементов внутри [data-wrapAnimation])             
+// }).init()
+
+// --------------------------------------------- HTML -----------------------------------------------------
+//
+// Укажите аттрибут [data-animation] на одиночном элементе с методом для анимации (top, bottom, left, right, opacity, scale) 
+// 
+// Укажите аттрибут [data-wrapAnimation] на родительском элементе и
+// аттрибут [data-itemAnimation] с методом для анимации (top, bottom, left, right, opacity, scale) 
+//
+// -------------------------------------- МИНИ АНИМАЦИЯ ПРИ СКРОЛЛЕ --------------------------------------------
+
+// ------- для одиночного в колонке "увелечение со сдвигом" -----
+:root{
+    --scroll-animation-transition-time: 0.5s;
+}
+
+// ------- для одиночного в колонке "увелечение" -----
+[data-animation="scale"],
+[data-itemAnimation="scale"] {
+    opacity: 0.75;
+    transform: scale(0.4);
+    transition-duration: var(--scroll-animation-transition-time);
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in-out;
+  
+    &.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// // ------- для одиночного в колонке "выход слева" -----
+[data-animation="left"],
+[data-itemAnimation="left"] {
+    transform: translateX(-50%);
+    opacity: 0;
+    transition-duration: var(--scroll-animation-transition-time);
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in-out;
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// ------- для одиночного в колонке "выход справа" -----
+[data-animation="right"],
+[data-itemAnimation="right"] {
+    transform: translateX(50%);
+    opacity: 0;
+    transition-duration: var(--scroll-animation-transition-time);
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in-out;
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// ------- для одиночного в колонке "выход сверху" -----
+[data-animation="up"],
+[data-itemAnimation="up"] {
+    transform: translateY(-50%);
+    opacity: 0;
+    transition-duration: var(--scroll-animation-transition-time);
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in-out;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// ------- для одиночного в колонке "выход снизу" -----
+[data-animation="down"],
+[data-itemAnimation="down"] {
+    transform: translateY(50%);
+    opacity: 0;
+    transition-duration: var(--scroll-animation-transition-time);
+    transition-property: opacity, transform;
+    transition-timing-function: ease-in-out;
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// ------- для одиночного в колонке "прзрачность" -----
+[data-animation="opacity"],
+[data-itemAnimation="opacity"] {
+    opacity: 0.2;
+    transition-duration: var(--scroll-animation-transition-time);
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+
+    &.active {
+        opacity: 1;
+    }
+}

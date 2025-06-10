@@ -1,0 +1,59 @@
+// ********************************* HTML ***************************************
+//
+// <!-- START Cookie-Alert -->
+//     <div id="cookie_note">
+//         <p>Мы используем файлы cookies для улучшения работы сайта. Оставаясь на нашем сайте, вы соглашаетесь с условиями
+//             использования файлов cookies. Чтобы ознакомиться с нашими Положениями о конфиденциальности и об
+//             использовании
+//             файлов cookie, <a href="#" target="_blank">нажмите здесь</a>.</p>
+//         <button class="button cookie_accept btn btn-primary btn-sm">Я согласен</button>
+//     </div>
+//
+// ********************************* JS ***************************************
+//
+// import checkCookies from './wl-modules/wl-cookies.js';
+// checkCookies();
+//
+// ********************************* SCSS ***************************************
+#cookie_note{
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    max-width: 90%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+    p{
+        margin: 0;
+        font-size: 0.7rem;
+        text-align: left;
+        color: black;
+    }
+    .btn{
+        border: 1px solid green;
+        border-radius: rem(4);
+        background-color: grey;
+        padding: 1rem;
+        color: white;
+        font-weight: bold;
+    }
+}
+.cookie_accept{
+    width:20%;
+}
+@media (min-width: 576px){
+    #cookie_note.show{
+        display: flex;
+        gap:rem(20);
+    }
+}
+
+@media (max-width: 575px){
+    #cookie_note.show{
+        display: block;
+        text-align: left;
+    }
+}
