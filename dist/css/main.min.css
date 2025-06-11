@@ -349,7 +349,6 @@ body {
 }
 
 .btn-widget-2 {
-  margin-top: 30px;
   margin-inline: auto;
   max-width: 173px;
   background: #C6C6E7;
@@ -906,15 +905,12 @@ body {
 .profile .widget-prompt .btn {
   margin-top: 30px;
 }
-.profile .widget-prompt-2 p {
+.profile .widget-prompt-22 p, .profile .widget-prompt-2 p {
   font-weight: 500;
   font-size: 15px;
   line-height: 120%;
   color: #1f1687;
   padding-bottom: 30px;
-}
-.profile .widget-prompt-22 {
-  transform: translateX(-20px);
 }
 .profile-content {
   border-radius: 40px 40px 0 0;
@@ -1177,6 +1173,7 @@ Extra styles for level 2
 ВСПЛЫВАЮЩИЕ БАЛЛЫ
 ------------------------------------------------------------------------------------------------------------------*/
 .counter_wrapper {
+  display: none;
   position: fixed;
   top: 20px;
   left: 0;

@@ -450,7 +450,12 @@ class Hack {
 
 	// ФОРМИРУЕМ И ПОКАЗЫВАЕМ БЛАНК
 	showBlank() {
-		const score = this.showScore();
+		let score;
+		if (this.showScore() <= 0) {
+			score = 0;
+		} else {
+			score = this.showScore();
+		};
 
 		const checkObj = this.compareObjects(this.options.check, this.checkBlank);
 		const scoresObj = this.compareObjects(this.options.article.scores, this.extraBlank);
