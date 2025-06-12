@@ -246,15 +246,23 @@
 			padding: 60px 120px;
 			width: 479px;
 			height: 176px;
-			background: linear-gradient(180deg, #f89061 0%, #ffa57c 50%);
-			background-size: 100% 200%;
-
-			transition: all 0.3s ease-in-out;
+			background: linear-gradient(90deg, #f89061, #ffc1a3, #f87040, #f89061);
+			// background: linear-gradient(90deg, #bfd6b5, #b9dfaa, #6fa969, #bfd6b5);
+			background-size: 200%;
+			transition: transform 0.3s ease;
 			margin-inline: auto;
 			&:hover {
-				animation: gradientAnimation 1s ease infinite;
+				animation: shimmer 2s linear infinite;
+				transform: translateY(-2px);
 			}
-
+			@keyframes shimmer {
+				0% {
+					background-position: 0% center;
+				}
+				100% {
+					background-position: 200% center;
+				}
+			}
 			@keyframes gradientAnimation {
 				0% {
 					background-position: 0% 0%;
