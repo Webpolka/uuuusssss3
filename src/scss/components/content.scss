@@ -450,6 +450,12 @@
 			min-height: 280px;
 			background: linear-gradient(180deg, #fff 0%, #9098d0 100%);
 		}
+		&_top-3 {
+			border-radius: 40px;
+			width: 100%;
+			min-height: 280px;
+			background: linear-gradient(180deg, #fff 0%, #dcacb5 100%);
+		}
 
 		// Нижний контейнер с элементами
 		&_bottom {
@@ -523,6 +529,11 @@
 	&-sidebar-2 {
 		margin-right: 40px;
 		background: linear-gradient(0deg, #fff 0%, #9098d0 100%);
+		border-radius: 40px 40px 0 0;
+	}
+	&-sidebar-3 {
+		margin-right: 40px;
+		background: linear-gradient(0deg, #fff 0%, #dcacb5 100%);
 		border-radius: 40px 40px 0 0;
 	}
 
@@ -662,6 +673,24 @@
 				}
 			}
 		}
+		&_tabs-3 {
+			display: inline-flex;
+			align-items: center;
+			gap: 40px;
+
+			margin-bottom: 20px;
+			span,
+			button {
+				font-weight: 400;
+				font-size: 30px;
+				color: #7d2e3c;
+				transition: all 0.3s ease-in-out;
+				&.active {
+					font-weight: 700;
+				}
+			}
+		}
+		
 
 		// Контейнер  с содержимым для табов
 		&_panels {
@@ -789,6 +818,12 @@
 	position: sticky;
 	top: 100px;
 }
+
+.sticky-parent-3 {
+	position: sticky;
+	top: 0px;	
+}
+
 
 // вспомогательный для меню
 .center-menu {

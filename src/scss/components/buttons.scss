@@ -60,7 +60,6 @@
 	min-width: 46px;
 	padding: 15px;
 	border-radius: 50px;
-	border: 1px solid #52856a;
 
 	font-weight: 400;
 	font-size: 20px;
@@ -70,34 +69,31 @@
 
 .btn-transparent {
 	background-color: transparent;
-	color: var(--black-text);
-	// &:hover {
-	// 	background-color: #bfd6b5;
-	// }
+	color: #52856a;
+	border: 1px solid #52856a;
 }
 .btn-transparent-2 {
 	background-color: transparent;
-	color: var(--black-text);
-	// &:hover {
-	// 	background-color: #c6c6e7;
-	// }
+	color:  #1f1687;
+	border: 1px solid #1f1687;
+}
+.btn-transparent-3 {
+	background-color: transparent;
+	color: #7d2e3c;
+	border: 1px solid #7d2e3c;
 }
 
 .btn-fill {
 	background-color: #52856a;
 	color: white;
-
-	// &:hover {
-	// 	background-color: #148147;
-	// }
 }
 .btn-fill-2 {
 	background-color: #1f1687;
 	color: white;
-
-	// &:hover {
-	// 	background-color: #09043f;
-	// }
+}
+.btn-fill-3 {
+	background-color: #7d2e3c;
+	color: white;
 }
 .btn-widget,
 .btn-widget-2 {
@@ -120,8 +116,8 @@
 .btn-widget-2 {
 	margin-inline: auto;
 	max-width: 173px;
-	background: #C6C6E7;
-	border: 1px solid #C6C6E7;
+	background: #c6c6e7;
+	border: 1px solid #c6c6e7;
 }
 
 .btn-like,
@@ -150,6 +146,19 @@
 	}
 }
 
+.btn-like-3,
+.like-3 {
+	display: block;
+	width: 44px;
+	height: 43px;
+	background-image: url("../../icons/heart-transparentr-3.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	&.active {
+		background-image: url("../../icons/heart-fill.svg");
+	}
+}
+
 .btn-comment {
 	display: block;
 	width: 44px;
@@ -164,6 +173,14 @@
 	width: 44px;
 	height: 43px;
 	background-image: url("../../icons/message-rectangle-2.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.btn-comment-3 {
+	display: block;
+	width: 44px;
+	height: 43px;
+	background-image: url("../../icons/message-rectangle-3.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
