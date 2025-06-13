@@ -2,7 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 	@@include('html/components/head.html', { 'title': 'Правила игры' })
 
-	<body style="background-color: #bfd6b5">
+	<body style="background-color: #c6c6e7;">
 		<div class="back-to-top_wrapper">
 			<div class="back-to-top_container">
 				<!-- Кнопка вернуться наверх -->
@@ -38,12 +38,7 @@
 						<li>Имя домашнего животного + 10</li>
 						<li>Последнее место, где был пользователь + 10</li>
 					</ul>
-
-					<p>Дополнительно :</p>
-					<ul id="extra">
-						<li>E-mail (если найдёшь) + 5</li>
-					</ul>
-
+				
 					<div id="useless"></div>
 
 					<div class="popup-callback_tile">
@@ -67,28 +62,37 @@
 					<div id="content">
 						<!-- Содержание для успешной игры -->
 						<div id="content-succes">
-							<p class="next small">
-								Следующий профиль будет посложнее. Не всё лежит <br />
-								на поверхности — придётся копать. Покажи, что ты умеешь <br />
-								не только кликать по ярким постам.
-							</p>
-							<a href="index3.html" class="popup-callback_btn"><span>ПЕРЕЙТИ НА СЛЕДУЮЩИЙ УРОВЕНЬ</span></a>
+							<p class="padding-top-100 small">							
+                             <strong class="strong">Заметка на будущее:</strong><br/>
+                                 Один пост с номером телефона + один с датой рождения = сброс пароля.<br />
+                                 А если ещё и кот по имени — то это, скорее всего, секретный вопрос.</br>
+                                  Не забывай: e-mail, даже старый, — ключ ко всему.</br>
+								  Он может восстановить доступ к десяткам сервисов.
+                             </p>
+                             <p class="next-laptop small pn">                           
+                                 Переходишь на новый уровень. </br>
+                                 Теперь тебе придётся распутывать цепочки:</br>
+								 информация не всегда будет прямой.<br />                                
+                                 Попробуй найти связи между комментарием, фото:</br>
+								 и датой. Это уже не квест, а настоящее расследование.                            
+                             </p>							
+							<a href="level-3.html" class="popup-callback_btn"><span>ПЕРЕЙТИ НА СЛЕДУЮЩИЙ УРОВЕНЬ</span></a>
 						</div>
 
 						<!-- Содержание для проигрыша -->
 						<div id="content-fail">
 							<p class="next small">Очень жаль, что ваши странья оказались недостаточными !</p>
-							<a href="index2.html" class="popup-callback_btn"><span>ПОПРОБОВАТЬ ЕЩЕ РАЗ</span></a>
+							<a href="level-2.html" class="popup-callback_btn"><span>ПОПРОБОВАТЬ ЕЩЕ РАЗ</span></a>
 						</div>
 					</div>
 
-					<a class="to-home" href="index2.html">Вернуться на главную</a>
+					<a class="to-home" href="index.html">Вернуться на главную</a>
 				</div>
 			</div>
 		</div>
 
 		<script src="./static/button-to-back.js"></script>
 
-		<script src="./static/level-1.js"></script>
+		<script src="./static/level-2.js"></script>
 	</body>
 </html>

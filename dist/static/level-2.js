@@ -448,6 +448,11 @@ class Hack {
 		return result;
 	}
 
+	// Adding scores to browser memory
+	addToLocalStorage(sum) {
+		localStorage.setItem("level-2", sum);
+	}
+
 	// ФОРМИРУЕМ И ПОКАЗЫВАЕМ БЛАНК
 	showBlank() {
 		let score;
@@ -455,7 +460,7 @@ class Hack {
 			score = 0;
 		} else {
 			score = this.showScore();
-		};
+		}		
 
 		const checkObj = this.compareObjects(this.options.check, this.checkBlank);
 		const scoresObj = this.compareObjects(this.options.article.scores, this.extraBlank);
@@ -517,6 +522,8 @@ class Hack {
 			if (this.hasOwnValue(this.checkBlank) && Number(this.showScore()) >= 30) {
 				tileEl.innerHTML = footerSucces;
 				winContentSucces.style.display = "block";
+				
+				this.addToLocalStorage(score);
 			} else {
 				tileEl.innerHTML = footerMiss;
 				winContentFail.style.display = "block";

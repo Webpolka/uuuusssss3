@@ -30,11 +30,11 @@
 					<div class="level">
 						<svg width="102" height="38" viewBox="0 0 102 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
-								d="M1.23223 17.2322C0.25592 18.2085 0.25592 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM102 16.5L3 16.5V21.5L102 21.5V16.5Z"
-								fill="#F89061"
+								d="M1.23223 17.2322C0.25592 18.2085 0.25592 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53554 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM102 16.5L3 16.5V21.5L102 21.5V16.5Z"
+								fill="#85B97B"
 							/>
 						</svg>
-						<span class="level_text">(1 уровень)</span>
+						<span class="level_2_text">(2 уровень)</span>
 					</div>
 				</div>
 
@@ -46,29 +46,11 @@
 						Собери необходимую информацию и отправь ее нам, дальше мы сами<br />
 						сделаем все, что нужно.
 					</p>
-				</div>
 
-				<!-- Сетка -->
-				<div class="game-rules_grid">
-					<!-- Лево -->
-					<div class="item item-left">
-						<p>Что нам нужно в этот раз</p>
-						<ul>
-							<li>Дата рождения</li>
-							<li>Адрес или город проживания</li>
-							<li>Телефон</li>
-							<li>Имя домашнего животного</li>
-							<li>Последнее место, где был пользователь</li>
-							<li>E-mail (если найдёшь)</li>
-						</ul>
-					</div>
-
-					<!-- Право -->
-					<div class="item item-right">
-						<div class="item-right_tile">
-							<p>Если найдешь ещё что-то интересное– тоже присылай, мы разберемся!</p>
-						</div>
-					</div>
+					<p class="think">
+						На этом уровне ты сам определяешь какие публикации содержат важную для взлома информацию. При этом за сбор лишних
+						(бесполезных) данных можно потерять баллы.
+					</p>
 				</div>
 			</article>
 		</section>
@@ -93,29 +75,25 @@
 		<!-- ************************** 1...ШАПКА ПРОФИЛЯ ******************************** -->
 		<article class="profile-header">
 			<!-- Верхняя часть ШАПКИ ПРОФИЛЯ -->
-			<div class="profile-header_top"></div>
+			<div class="profile-header_top-2"></div>
 			<!-- Нижняя часть ШАПКИ ПРОФИЛЯ -->
 			<div class="profile-header_bottom">
 				<div class="bottom-grid">
 					<!-- 1 -->
 					<div class="bottom-grid_item item-1">
-						<img src="../../images/avatar.png" alt="Аватар" />
+						<img src="../../images/level-2/avatar.png" alt="Аватар" />
 					</div>
 
 					<!-- 2 -->
 					<div class="bottom-grid_item item-2">
-						<h3 class="name">Дарина Белова</h3>
-						<p>
-							Я — Дарина, обожаю путешествовать и проводить время с друзьями. В свободное <br />
-							время занимаюсь йогой и работаю в IT-компании. Мечтаю об идеальном отпуске и <br />
-							путешествиях по миру.
-						</p>
+						<h3 class="name">Артём Герасимов</h3>
+						<p>UX-дизайнер в стартапе, люблю утро с кофе и вечер с гитарой.</p>
 					</div>
 
 					<!-- 3 -->
 					<div class="bottom-grid_item item-3">
 						<!-- Кнопка СООБЩЕНИЕ -->
-						<span class="btn btn-fill" id="message">
+						<span class="btn btn-fill-2" id="message">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_2394_1888)">
 									<path
@@ -132,12 +110,12 @@
 						</span>
 
 						<!-- Кнопка ПОДПИСАТЬСЯ -->
-						<span class="btn btn-fill" id="subscribe">
+						<span class="btn btn-fill-2" id="subscribe">
 							<span>Подписаться</span>
 						</span>
 
 						<!-- Кнопка НАПИСАТЬ -->
-						<span class="btn btn-transparent" id="write">
+						<span class="btn btn-transparent-2" id="write">
 							<span>Написать</span>
 						</span>
 					</div>
@@ -148,7 +126,7 @@
 		<!-- ********************** 2...СЕТКА КОНТЕНТА ПРОФИЛЯ ************************** -->
 		<div class="profile-grid">
 			<!-- Сайдбар ПРОФИЛЯ -->
-			<aside class="profile-sidebar">
+			<aside class="profile-sidebar-2">
 				<!-- ВИДЖЕТ 1 -->
 				<div class="widget widget-menu">
 					<!-- Заголовок виджета 1-->
@@ -157,8 +135,8 @@
 					<!-- Меню виджета 1-->
 					<nav class="widget-menu_nav">
 						<ul id="about-list">
-							<li><img src="../../icons/person.svg" alt="Персона" /><span>Женщина</span></li>
-							<li><img src="../../icons/cake.svg" alt="День рожднеия" /><span>17 мая</span></li>
+							<li><img src="../../icons/person.svg" alt="Персона" /><span>Мужчина</span></li>
+							<li><img src="../../icons/cake.svg" alt="День рожднеия" /><span>Дата рождения скрыта</span></li>
 							<li><img src="../../icons/location.svg" alt="Адресс" /><span>г. Казань</span></li>
 							<li><img src="../../icons/message.svg" alt="Почта" /><span>e-mail скрыт</span></li>
 							<li><img src="../../icons/call.svg" alt="Телефон" /><span>Номер телефона скрыт</span></li>
@@ -170,19 +148,16 @@
 
 				<div class="sticky-parent">
 					<!-- ВИДЖЕТ 2-->
-					<div class="widget widget-prompt">
-						<p><strong> Что нам нужно в этот раз:</strong></p>
-						<ul id="check-list">
-							<li><span>Дата рождения</span></li>
-							<li><span>Адрес или город проживания</span></li>
-							<li><span>Телефон</span></li>
-							<li><span>Имя домашнего животного</span></li>
-							<li><span>Последнее место, где был пользователь</span></li>
-							<li><span>E-mail (если найдёшь)</span></li>
-						</ul>
+					<div class="widget widget-prompt-22">
+						<p>
+							<strong>
+								На этом уровне ты сам определяешь какие публикации содержат важную для взлома информацию. При этом за сбор
+								лишних (бесполезных) данных можно потерять баллы.</strong
+							>
+						</p>
 
-						<button class="btn btn-widget" id="end-level">
-							<span>Завершить уровень досрочно</span>
+						<button class="btn btn-widget-2" id="end-level">
+							<span>Завершить уровень</span>
 						</button>
 					</div>
 				</div>
@@ -191,7 +166,7 @@
 			<!-- КОНТЕНТ ПРОФИЛЯ -->
 			<article class="profile-content">
 				<!-- Вкладки -->
-				<div class="profile-content_tabs">
+				<div class="profile-content_tabs-2">
 					<span data-tab="1">Подписчики</span>
 					<span data-tab="2">Подписки</span>
 					<span class="active" data-tab="3">Мои посты</span>
@@ -213,13 +188,13 @@
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<span class="item_left">
-												<h3>Дарина Белова</h3>
+												<h3>Артём Герасимов</h3>
 												<small>15 минут назад</small>
 											</span>
 
@@ -234,14 +209,16 @@
 
 								<!-- Изображение в посте  -->
 								<div class="post-image">
-									<img class="img-responsive" src="../../images/post-1.png" alt="Изображение поста" />
+									<img class="img-responsive" src="../../images/level-2/post-1.png" alt="Изображение поста" />
 								</div>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Отправляюсь в путешествие</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text"
+											>Инжир считает, что я работаю слишком много. Или слишком мало...</span
+										>
 									</p>
 								</div>
 
@@ -249,13 +226,13 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like" ></span>
+										<span class="like-2" ></span>
 										<span>45</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item">
-										<span class="btn-comment"></span>
+										<span class="btn-comment-2"></span>
 										<span>12</span>
 									</div>
 								</div>
@@ -268,63 +245,13 @@
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<span class="item_left">
-												<h3>Дарина Белова</h3>
-												<small>15 часов назад</small>
-											</span>
-
-											<div class="item-right">
-												<span data-id="more">
-													<img src="../../icons/more-horizontal.svg" alt="Больше" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Сообщенеи в посте  -->
-								<div class="post-message">
-									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Сегодня 17 мая - день, когда я появилась на свет !</span>
-									</p>
-								</div>
-
-								<!-- Метаданные в посте  -->
-								<div class="post-meta">
-									<!-- Лайки -->
-									<div class="post-meta_item">
-										<span class="like" ></span>
-										<span>233</span>
-									</div>
-
-									<!-- Комментарии -->
-									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>56</span>
-									</div>
-								</div>
-							</article>
-
-							<!-- 3.3 -->
-							<article class="post" id="3">
-								<!-- Верхняя линия в посте  -->
-								<div class="post-header">
-									<div class="post-header_grid">
-										<!-- Левая часть -->
-										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
-										</div>
-
-										<!-- Правая часть -->
-										<div class="item-beetwen">
-											<span class="item_left">
-												<h3>Дарина Белова</h3>
+												<h3>Артём Герасимов</h3>
 												<small>1 день назад</small>
 											</span>
 
@@ -337,16 +264,13 @@
 									</div>
 								</div>
 
-								<!-- Изображение в посте  -->
-								<div class="post-image">
-									<img class="img-responsive" src="../../images/post-2.png" alt="Изображение поста 2" />
-								</div>
-
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Мой уютный уголок!</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text"
+											>Ставлю бюдильник на 6:30. Утро лучшее время суток. Кто со мной?</span
+										>
 									</p>
 								</div>
 
@@ -354,14 +278,69 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like active" ></span>
-										<span>130</span>
+										<span class="like-2" ></span>
+										<span>23</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>20</span>
+										<span class="btn-comment-2"></span>
+										<span>2</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- 3.3 -->
+							<article class="post" id="3">
+								<!-- Верхняя линия в посте  -->
+								<div class="post-header">
+									<div class="post-header_grid">
+										<!-- Левая часть -->
+										<div class="item">
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
+										</div>
+
+										<!-- Правая часть -->
+										<div class="item-beetwen">
+											<span class="item_left">
+												<h3>Артём Герасимов</h3>
+												<small>2 дня назад</small>
+											</span>
+
+											<div class="item-right">
+												<span data-id="more">
+													<img src="../../icons/more-horizontal.svg" alt="Больше" />
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Изображение в посте  -->
+								<div class="post-image">
+									<img class="img-responsive" src="../../images/level-2/post-2.png" alt="Изображение поста 2" />
+								</div>
+
+								<!-- Сообщенеи в посте  -->
+								<div class="post-message">
+									<p>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Вечер идеален , если ничего не нужно делать!</span>
+									</p>
+								</div>
+
+								<!-- Метаданные в посте  -->
+								<div class="post-meta">
+									<!-- Лайки -->
+									<div class="post-meta_item">
+										<span class="like-2" ></span>
+										<span>12</span>
+									</div>
+
+									<!-- Комментарии -->
+									<div class="post-meta_item ml-40">
+										<span class="btn-comment-2"></span>
+										<span>1</span>
 									</div>
 								</div>
 							</article>
@@ -373,14 +352,14 @@
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<span class="item_left">
-												<h3>Дарина Белова</h3>
-												<small>15 минут назад</small>
+												<h3>Артём Герасимов</h3>
+												<small>2 дня назад</small>
 											</span>
 
 											<div class="item-right">
@@ -395,8 +374,8 @@
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Нужен хороший мастер по ремонту. Писать в личку или на +7 987 654-32-10</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Нашёл мастера, который реально спас мой велик после того как я угробил тормоза. Если кому нужно	— пишите ему напрямую,он не против: +7 931 228-64-95. Работает быстро и не дерёт цену.</span>
 									</p>
 								</div>
 
@@ -404,14 +383,26 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like" ></span>
-										<span>89</span>
+										<span class="like-2" ></span>
+										<span>45</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>25</span>
+										<span class="btn-comment-2"></span>
+										<span>2</span>
+									</div>
+								</div>
+
+								<!-- Комментарии в посте  -->
+								<div class="post-comments">
+									<!-- 1 -->
+									<div class="post-comments_item">
+										<p><strong>Комментарии:</strong></p>
+										<p>
+											<strong>Антон Городецкий</strong>
+											<span class="post-message_comment">Бро, это же твой номер...</span>
+										</p>
 									</div>
 								</div>
 							</article>
@@ -423,13 +414,13 @@
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<span class="item_left">
-												<h3>Дарина Белова</h3>
+												<h3>Артём Герасимов</h3>
 												<small>3 дня назад</small>
 											</span>
 
@@ -442,16 +433,11 @@
 									</div>
 								</div>
 
-								<!-- Изображение в посте  -->
-								<div class="post-image">
-									<img class="img-responsive" src="../../images/post-3.png" alt="Изображение поста" />
-								</div>
-
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Провели выходные в Сосновке. Обожаю это место!</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">У кого есть хороший рецепт чизкейка без сахара?</span>
 									</p>
 								</div>
 
@@ -459,14 +445,14 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like" ></span>
-										<span>156</span>
+										<span class="like-2" ></span>
+										<span>23</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>20</span>
+										<span class="btn-comment-2"></span>
+										<span>2</span>
 									</div>
 								</div>
 							</article>
@@ -478,13 +464,13 @@
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<span class="item_left">
-												<h3>Дарина Белова</h3>
+												<h3>Артём Герасимов</h3>
 												<small>4 дня назад</small>
 											</span>
 
@@ -497,11 +483,16 @@
 									</div>
 								</div>
 
+								<!-- Изображение в посте  -->
+								<div class="post-image">
+									<img class="img-responsive" src="../../images/level-2/post-3.png" alt="Изображение поста" />
+								</div>
+
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">У меня один пароль на всё. Иначе я бы вообще нигде не входила.</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Вдохновляющие мелочи вокруг</span>
 									</p>
 								</div>
 
@@ -509,102 +500,87 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like active" ></span>
-										<span>100</span>
+										<span class="like-2" ></span>
+										<span>63</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>90</span>
-									</div>
-								</div>
-
-								<!-- Комментарии в посте  -->
-								<div class="post-comments">
-									<!-- 1 -->
-									<div class="post-comments_item">
-										<p><strong>Комментарии:</strong></p>
-										<p>
-											<strong>Артём Герасимов</strong>
-											<span class="post-message_text"> Я один раз потерял пароль, пришлось новый аккаунт заводить, еле всех друзей нашел потом, как с тобой можно будет связаться если что?</span>
-										</p>
-									</div>
-									<!-- 2 -->
-									<div class="post-comments_item">
-										<p><strong>Ответ:</strong></p>
-										<p>
-											<strong>Дарина Белова : </strong>
-											<span class="post-message_text">Пиши в телегу или на старую почту: masha.vetrov@oldmail.com или landcorobka@gmail.com</span>
-										</p>
+										<span class="btn-comment-2"></span>
+										<span>11</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.7 -->
-							<article class="post" id="7">
-								<!-- Верхняя линия в посте  -->
-								<div class="post-header">
-									<div class="post-header_grid">
-										<!-- Левая часть -->
-										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
-										</div>
-
-										<!-- Правая часть -->
-										<div class="item-beetwen">
-											<span class="item_left">
-												<h3>Дарина Белова</h3>
-												<small>4 дня назад</small>
-											</span>
-
-											<div class="item-right">
-												<span data-id="more">
-													<img src="../../icons/more-horizontal.svg" alt="Больше" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Сообщенеи в посте  -->
-								<div class="post-message">
-									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Вернулись с Барни с прогулки. Он устал, я тоже...</span>
-									</p>
-								</div>
-
-								<!-- Метаданные в посте  -->
-								<div class="post-meta">
-									<!-- Лайки -->
-									<div class="post-meta_item">
-										<span class="like" ></span>
-										<span>240</span>
-									</div>
-
-									<!-- Комментарии -->
-									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>20</span>
-									</div>
-								</div>
-							</article>
-
-							<!-- 3.8 -->
 							<article class="post" id="8">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<span class="item_left">
-												<h3>Дарина Белова</h3>
+												<h3>Артём Герасимов</h3>
+												<small>4 дня назад</small>
+											</span>
+
+											<div class="item-right">
+												<span data-id="more">
+													<img src="../../icons/more-horizontal.svg" alt="Больше" />
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Изображение в посте  -->
+								<div class="post-image">
+									<img class="img-responsive" src="../../images/level-2/post-4.png" alt="Изображение поста" />
+								</div>
+
+								<!-- Сообщенеи в посте  -->
+								<div class="post-message">
+									<p>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">С каждым годом всё больше люблю Питер — за утренние набережные, кофе на углу и бесконечный ветер. Иногда раздражает, но всё равно — это мой город.</span>
+									</p>
+								</div>
+
+								<!-- Метаданные в посте  -->
+								<div class="post-meta">
+									<!-- Лайки -->
+									<div class="post-meta_item">
+										<span class="like-2" ></span>
+										<span>33</span>
+									</div>
+
+									<!-- Комментарии -->
+									<div class="post-meta_item ml-40">
+										<span class="btn-comment-2"></span>
+										<span>1</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- 3.8 -->
+							<article class="post" id="7">
+								<!-- Верхняя линия в посте  -->
+								<div class="post-header">
+									<div class="post-header_grid">
+										<!-- Левая часть -->
+										<div class="item">
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
+										</div>
+
+										<!-- Правая часть -->
+										<div class="item-beetwen">
+											<span class="item_left">
+												<h3>Артём Герасимов</h3>
 												<small>5 дней назад</small>
 											</span>
 
@@ -617,16 +593,11 @@
 									</div>
 								</div>
 
-								<!-- Изображение в посте  -->
-								<div class="post-image">
-									<img class="img-responsive" src="../../images/post-4.png" alt="Изображение поста" />
-								</div>
-
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Главный повар дома:</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Выходные в Зеленогорске — кайф! Море сосен и минимум людей</span>
 									</p>
 								</div>
 
@@ -634,33 +605,133 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like active" ></span>
-										<span>100</span>
+										<span class="like-2" ></span>
+										<span>54</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>67</span>
+										<span class="btn-comment-2"></span>
+										<span>2</span>
 									</div>
 								</div>
 							</article>
 
 							<!-- 3.9 -->
+							<article class="post" id="7">
+								<!-- Верхняя линия в посте  -->
+								<div class="post-header">
+									<div class="post-header_grid">
+										<!-- Левая часть -->
+										<div class="item">
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
+										</div>
+
+										<!-- Правая часть -->
+										<div class="item-beetwen">
+											<span class="item_left">
+												<h3>Артём Герасимов</h3>
+												<small>23.04</small>
+											</span>
+
+											<div class="item-right">
+												<span data-id="more">
+													<img src="../../icons/more-horizontal.svg" alt="Больше" />
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Сообщенеи в посте  -->
+								<div class="post-message">
+									<p>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Смотрю "Тед Лассо", кто бы мог подумать, что сериалы могут так заряжать!</span>
+									</p>
+								</div>
+
+								<!-- Метаданные в посте  -->
+								<div class="post-meta">
+									<!-- Лайки -->
+									<div class="post-meta_item">
+										<span class="like-2" ></span>
+										<span>23</span>
+									</div>
+
+									<!-- Комментарии -->
+									<div class="post-meta_item ml-40">
+										<span class="btn-comment-2"></span>
+										<span>2</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- 3.10 -->
+							<article class="post" id="7">
+								<!-- Верхняя линия в посте  -->
+								<div class="post-header">
+									<div class="post-header_grid">
+										<!-- Левая часть -->
+										<div class="item">
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
+										</div>
+
+										<!-- Правая часть -->
+										<div class="item-beetwen">
+											<span class="item_left">
+												<h3>Артём Герасимов</h3>
+												<small>21.04</small>
+											</span>
+
+											<div class="item-right">
+												<span data-id="more">
+													<img src="../../icons/more-horizontal.svg" alt="Больше" />
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Сообщенеи в посте  -->
+								<div class="post-message">
+									<p>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Даже не верится, что с сегодняшнего дня мне 26! Спасибо всем за поздравления!</span>
+									</p>
+								</div>
+
+								<!-- Метаданные в посте  -->
+								<div class="post-meta">
+									<!-- Лайки -->
+									<div class="post-meta_item">
+										<span class="like-2" ></span>
+										<span>123</span>
+									</div>
+
+									<!-- Комментарии -->
+									<div class="post-meta_item ml-40">
+										<span class="btn-comment-2"></span>
+										<span>34</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- 3.11-->
 							<article class="post" id="9">
 								<!-- Верхняя линия в посте  -->
 								<div class="post-header">
 									<div class="post-header_grid">
 										<!-- Левая часть -->
 										<div class="item">
-											<img class="img-responsive" src="../../images/avatar.png" alt="Аватар" />
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
 										</div>
 
 										<!-- Правая часть -->
 										<div class="item-beetwen">
 											<div class="item_left">
-												<h3>Дарина Белова</h3>
-												<small>9 дней назад</small>
+												<h3>Артём Герасимов</h3>
+												<small>19.04</small>
 											</div>
 
 											<div class="item-right">
@@ -674,14 +745,14 @@
 
 								<!-- Изображение в посте  -->
 								<div class="post-image">
-									<img class="img-responsive" src="../../images/post-5.png" alt="Изображение поста" />
+									<img class="img-responsive" src="../../images/level-2/post-5.jpeg" alt="Изображение поста" />
 								</div>
 
 								<!-- Сообщенеи в посте  -->
 								<div class="post-message">
 									<p>
-										<strong>Дарина Белова :</strong>
-										<span class="post-message_text">Новенький маникюр</span>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Он красавец, я в восторге!</span>
 									</p>
 								</div>
 
@@ -689,14 +760,119 @@
 								<div class="post-meta">
 									<!-- Лайки -->
 									<div class="post-meta_item">
-										<span class="like" ></span>
-										<span>450</span>
+										<span class="like-2" ></span>
+										<span>89</span>
 									</div>
 
 									<!-- Комментарии -->
 									<div class="post-meta_item ml-40">
-										<span class="btn-comment"></span>
-										<span>67</span>
+										<span class="btn-comment-2"></span>
+										<span>10</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- 3.12 -->
+							<article class="post" id="7">
+								<!-- Верхняя линия в посте  -->
+								<div class="post-header">
+									<div class="post-header_grid">
+										<!-- Левая часть -->
+										<div class="item">
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
+										</div>
+
+										<!-- Правая часть -->
+										<div class="item-beetwen">
+											<span class="item_left">
+												<h3>Артём Герасимов</h3>
+												<small>17.04</small>
+											</span>
+
+											<div class="item-right">
+												<span data-id="more">
+													<img src="../../icons/more-horizontal.svg" alt="Больше" />
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Сообщенеи в посте  -->
+								<div class="post-message">
+									<p>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Если вдруг кто писал — телефон утопил в пруду, временно на другом номере: +7 921 321-76-48. Лучше стучите в телегу.</span>
+									</p>
+								</div>
+
+								<!-- Метаданные в посте  -->
+								<div class="post-meta">
+									<!-- Лайки -->
+									<div class="post-meta_item">
+										<span class="like-2" ></span>
+										<span>56</span>
+									</div>
+
+									<!-- Комментарии -->
+									<div class="post-meta_item ml-40">
+										<span class="btn-comment-2"></span>
+										<span>3</span>
+									</div>
+								</div>
+							</article>
+
+							<!-- 3.13-->
+							<article class="post" id="9">
+								<!-- Верхняя линия в посте  -->
+								<div class="post-header">
+									<div class="post-header_grid">
+										<!-- Левая часть -->
+										<div class="item">
+											<img class="img-responsive" src="../../images/level-2/avatar.png" alt="Аватар" />
+										</div>
+
+										<!-- Правая часть -->
+										<div class="item-beetwen">
+											<div class="item_left">
+												<h3>Артём Герасимов</h3>
+												<small>14.04</small>
+											</div>
+
+											<div class="item-right">
+												<span data-id="more">
+													<img src="../../icons/more-horizontal.svg" alt="Больше" />
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Изображение в посте  -->
+								<div class="post-image">
+									<img class="img-responsive" src="../../images/level-2/post-6.png" alt="Изображение поста" />
+								</div>
+
+									<!-- Сообщенеи в посте  -->
+								<div class="post-message hidden">
+									<p>
+										<strong>Артём Герасимов :</strong>
+										<span class="post-message_text">Фото с велосипедом у парадной, на стене — табличка: ул. Бассейная, д. 12.</span>
+									</p>
+								</div>
+
+								<!-- Метаданные в посте  -->
+								<div class="post-meta">
+									<!-- Лайки -->
+									<div class="post-meta_item">
+										<span class="like-2" ></span>
+										<span>103</span>
+									</div>
+
+									<!-- Комментарии -->
+									<div class="post-meta_item ml-40">
+										<span class="btn-comment-2"></span>
+										<span>7</span>
 									</div>
 								</div>
 							</article>

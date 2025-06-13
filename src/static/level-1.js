@@ -117,7 +117,7 @@ class Hack {
 		// получаем выделенный текст
 		const posts = document.querySelectorAll(".posts .post-message_text");
 		const aboutList = document.querySelector("#about-list");
-		let workingText = null;		
+		let workingText = null;
 
 		posts.forEach((message) => {
 			if (message.contains(e.target) || aboutList.contains(e.target)) {
@@ -372,6 +372,11 @@ class Hack {
 		return result;
 	}
 
+	// Adding scores to browser memory
+	addToLocalStorage(sum) {
+		localStorage.setItem("level-1", sum);
+	}
+
 	// ФОРМИРУЕМ И ПОКАЗЫВАЕМ БЛАНК
 	showBlank() {
 		const score = this.showScore();
@@ -428,6 +433,7 @@ class Hack {
 			if (this.hasOwnValue(this.checkBlank) && Number(this.showScore()) >= 30) {
 				tileEl.innerHTML = footerSucces;
 				winContentSucces.style.display = "block";
+				this.addToLocalStorage(score);
 			} else {
 				tileEl.innerHTML = footerMiss;
 				winContentFail.style.display = "block";

@@ -654,7 +654,8 @@ body {
   text-align: center;
   margin-bottom: 70px;
 }
-.start_button button {
+.start_button .button {
+  color: white;
   display: inline-flex;
   align-items: center;
   font-weight: 700;
@@ -669,7 +670,7 @@ body {
   transition: transform 0.3s ease;
   margin-inline: auto;
 }
-.start_button button:hover {
+.start_button .button:hover {
   animation: shimmer 2s linear infinite;
   transform: translateY(-2px);
 }
@@ -1270,10 +1271,13 @@ Extra styles for level 3
   display: block;
   margin-inline: auto;
   margin-bottom: 20px;
-  transition: all 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
 }
-#level-3 .widget-prompt-3 .btn-widget-3.green-background {
-  background: green !important;
+#level-3 .widget-prompt-3 .btn-widget-3:active {
+  color: gray;
+}
+#level-3 .widget-prompt-3 .btn-widget-3.success {
+  background-color: green !important;
 }
 #level-3 .widget-prompt-3 small {
   display: block;
@@ -1283,6 +1287,221 @@ Extra styles for level 3
   line-height: 120%;
   text-align: center;
   color: #7d2e3c;
+}
+#level-3 .no-edit {
+  pointer-events: none; /* Предотвращает взаимодействие с элементом */
+  opacity: 0.3; /* Делает элемент полупрозрачным */
+}
+
+.alertText {
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 2rem;
+  line-height: 110%;
+  color: black;
+  font-weight: bold;
+  border: 1px solid #000;
+  border-radius: 40px;
+  padding: 50px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+@media (max-width: 320px) {
+  .alertText {
+    font-size: 1.5rem;
+  }
+}
+.alertText.active {
+  top: 50%;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+Finish page styles
+---------------------------------------------------------------------------------------------------------*/
+.page-finish .greeting {
+  padding-top: 50px;
+}
+.page-finish .finish-info {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 60px 60px;
+  margin: 0 39px 50px 41px;
+}
+.page-finish .finish-info p {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.page-finish .finish-info p:nth-child(2) {
+  margin-bottom: 100px;
+}
+.page-finish .finish-info p:last-child {
+  margin-bottom: 0;
+}
+.page-finish .space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.page-finish .space-between h1 {
+  margin-bottom: 0;
+}
+.page-finish .finish-intro {
+  padding-bottom: 480px;
+  background-image: url("../images/finish.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.page-finish .finish-note {
+  margin-bottom: 100px;
+}
+.page-finish .finish-note h2 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+}
+.page-finish .finish-note p {
+  font-weight: 500;
+  font-size: 30px;
+  max-width: 70%;
+}
+.page-finish .finish-list {
+  position: relative;
+  margin-bottom: 120px;
+}
+.page-finish .finish-list h2 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  margin-bottom: 50px;
+}
+.page-finish .finish-list p,
+.page-finish .finish-list li {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.page-finish .finish-list li {
+  position: relative;
+  list-style: none;
+  margin-left: 50px;
+}
+.page-finish .finish-list li:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 4px solid #000;
+}
+.page-finish .finish-list li:last-child {
+  margin-bottom: 0;
+}
+.page-finish .finish-list:before {
+  position: absolute;
+  content: "";
+  top: -180px;
+  right: 170px;
+  width: 283px;
+  height: 215px;
+  background-image: url("../images/laptop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.page-finish .finish-list:after {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  right: 100px;
+  width: 169px;
+  height: 142px;
+  background-image: url("../images/laptop-green.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.page-finish .finish-center {
+  text-align: center;
+}
+.page-finish .finish-center p {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.page-finish .finish-center h2 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  margin-bottom: 50px;
+}
+.page-finish .finish-inline_buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+}
+
+.btn-y {
+  background-color: #f7d287;
+  border-radius: 40px;
+  display: inline-block;
+  background: linear-gradient(90deg, #f7d287, #ffe4a1, #f7b74a, #f7d287);
+  background-size: 200%;
+  transition: transform 0.3s ease;
+  animation: none;
+  text-decoration: none;
+  color: black;
+  padding: 30px 65px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 90%;
+  text-align: center;
+}
+
+.btn-y:hover {
+  animation: shimmer 2s linear infinite;
+  transform: translateY(-2px);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+.btn-o {
+  background-color: #f89061;
+  border-radius: 40px;
+  padding: 30px 65px;
+  display: inline-block;
+  background: linear-gradient(90deg, #f89061, #ffc1a3, #f87040, #f89061);
+  background-size: 200%;
+  transition: transform 0.3s ease;
+  animation: none;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 90%;
+  text-align: center;
+}
+
+.btn-o:hover {
+  animation: shimmer 2s linear infinite;
+  transform: translateY(-2px);
 }
 
 /* ----------------------------------------------------------------------------------------------------------------

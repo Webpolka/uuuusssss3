@@ -1,35 +1,146 @@
 /* -------------------------------------------------------------------------------------------------------------------------\
-Extra styles for level 2
+Extra styles for level 3
 ---------------------------------------------------------------------------------------------------------------------------*/
-
-.level_2_text {
-	font-weight: 700;
-	font-size: 60px;
-	line-height: 90%;
-	color: #85b97b;
-}
-
-.game-rules_description {
-	.think {
-		font-weight: 500;
-		font-size: 40px;
-		line-height: 120%;
-
-		padding-top: 40px;
+#level-3 {
+	.level_3_text {
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 90%;
+		color: #dcacb5;
 	}
-	.slim {
-		font-weight: 500;
-		font-size: 40px;
-		line-height: 120%;
+
+	.padding-left-50 {
+		padding-left: 50px;
+	}
+
+	.margin-bottom-50 {
+		margin-bottom: 40px;
+	}
+
+	.game-rules_description {
+		margin-bottom: 0;
+	}
+	.search-form input::placeholder {
+		color: #7d2e3c;
+	}
+	.link {
+		color: blue;
+		cursor: pointer;
+		&:hover {
+			color: violet;
+		}
+	}
+
+	.widget-prompt-3 {
+		margin-bottom: 0;
+		.title-widget-3 {
+			text-align: center;
+			font-weight: 700;
+			font-size: 25px;
+			line-height: 120%;
+			color: #7d2e3c;
+			margin-bottom: 15px;
+		}
+		p {
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 120%;
+			color: #7d2e3c;
+			text-align: center;
+
+			margin-bottom: 20px;
+		}
+		input.input-widget-3 {
+			display: block;
+			border: 1px solid #7d2e3c;
+			border-radius: 40px;
+			padding: 10px 15px;
+			width: 248px;
+			height: 31px;
+			margin-inline: auto;
+
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 100%;
+			letter-spacing: 0.03em;
+			text-align: justify;
+			color: #7d2e3c;
+
+			margin-bottom: 10px;
+			&::placeholder {
+				color: #dcacb6;
+			}
+		}
+
+		.btn-widget-3 {
+			border-radius: 40px;
+			padding: 10px 15px;
+			width: 150px;
+			height: 31px;
+			background: #7d2e3c;
+
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 100%;
+			letter-spacing: 0.03em;
+			color: #fff;
+			display: block;
+			margin-inline: auto;
+
+			margin-bottom: 20px;
+			transition: background-color 1s ease-in-out;
+			&:active {
+				color: gray;
+			}
+
+			&.success {
+				background-color: green !important;
+			}
+		}
+
+		small {
+			display: block;
+			text-align: center;
+			font-weight: 500;
+			font-size: 10px;
+			line-height: 120%;
+			text-align: center;
+			color: #7d2e3c;
+		}
+	}
+
+	.no-edit {
+		pointer-events: none; /* Предотвращает взаимодействие с элементом */
+		opacity: 0.3; /* Делает элемент полупрозрачным */
 	}
 }
+.alertText {
+	position: fixed;
+	text-align: center;
+	text-transform: uppercase;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	font-size: 2rem;
+	line-height: 110%;
+	color: black;
+	font-weight: bold;
 
-.hidden {
-	display: none;
-}
-.index-up {
-	position: relative;
-	z-index: 10;
-	margin-top: 60px;
-	margin-bottom: 80px;
+	border: 1px solid #000;
+	border-radius: 40px;
+	padding: 50px;
+	background-color: white;
+
+	transition: all 0.5s ease-in-out;
+	z-index: 100;
+
+	@include xs {
+		font-size: 1.5rem;
+	}
+
+	&.active {
+		top: 50%;
+		opacity: 1;
+	}
 }
