@@ -460,7 +460,7 @@ class Hack {
 			score = 0;
 		} else {
 			score = this.showScore();
-		}		
+		}
 
 		const checkObj = this.compareObjects(this.options.check, this.checkBlank);
 		const scoresObj = this.compareObjects(this.options.article.scores, this.extraBlank);
@@ -522,7 +522,7 @@ class Hack {
 			if (this.hasOwnValue(this.checkBlank) && Number(this.showScore()) >= 30) {
 				tileEl.innerHTML = footerSucces;
 				winContentSucces.style.display = "block";
-				
+
 				this.addToLocalStorage(score);
 			} else {
 				tileEl.innerHTML = footerMiss;
@@ -594,3 +594,6 @@ const newHack = new Hack(".post", {
 		town: "Город",
 	},
 }).listener();
+
+const counterBadge = document.querySelector(".counter_wrapper");
+counterBadge.classList.add("hidden");

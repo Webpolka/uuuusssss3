@@ -21,12 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	} else {
 		results.innerHTML = 0;
 	}
-	// Если не нужно очищать память браузера после игры то закомментируй вызов функции
-	resetLocalStorage();
 
-	function resetLocalStorage() {
+	localStorage.setItem("score", sum);
+	
+	// resetLevelsLocalStorage();
+	function resetLevelsLocalStorage() {
 		localStorage.setItem("level-1", 0);
 		localStorage.setItem("level-2", 0);
 		localStorage.setItem("level-3", 0);
 	}
+
+	console.log("score =", sum, "in browser localStorage !");
 });

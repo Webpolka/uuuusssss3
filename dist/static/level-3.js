@@ -2,8 +2,7 @@ class HackHunter {
 	constructor(options) {
 		// Default options for current class
 		const defaultConfig = {
-			liveArray: [				
-				"111",
+			liveArray: [
 				"Владимир, улица Мира, 32",
 				"Владимир, ул. Мира, 32",
 				"г. Владимир, ул. Мира, д. 32",
@@ -15,8 +14,7 @@ class HackHunter {
 				"во Владимире, на улице Мира, в доме 32",
 				"Владимир, Мира, 32",
 			],
-			workArray: [				
-				"111",
+			workArray: [
 				"Владимир, улица Мира, 32",
 				"Владимир, ул. Мира, 32",
 				"г. Владимир, ул. Мира, д. 32",
@@ -29,26 +27,25 @@ class HackHunter {
 				"Владимир, Мира, 32",
 			],
 			contactsArray: [
-				"111",				
-				"+7 (904) 567-32-18, hairdresser.alina.hair@gmail.com",
-				"телефон +7 (904) 567-32-18, электронная почта hairdresser.alina.hair@gmail.com",
-				"+7 904 567 32 18, hairdresser.alina.hair@gmail.com",
-				"телефон 7 (904) 567-32-18, email hairdresser.alina.hair@gmail.com",
-				"телефон: 7 (904) 567-32-18, email: hairdresser.alina.hair@gmail.com",
-				"телефон: +7 (904) 567-32-18, email: hairdresser.alina.hair@gmail.com",
-				"телефон +7 (904) 567-32-18, email hairdresser.alina.hair@gmail.com",
-				"89045673218, hairdresser.alina.hair@gmail.com",
-				"8 904 567 32 18, hairdresser.alina.hair@gmail.com",
-				"телефон 89045673218, электронная почта hairdresser.alina.hair@gmail.com",
-				"телефон 8 904 567 32 18, электронная почта hairdresser.alina.hair@gmail.com",
-				"телефон: 8 904 567 32 18, электронная почта: hairdresser.alina.hair@gmail.com",
-				"телефон: 89045673218, электронная почта: hairdresser.alina.hair@gmail.com",
-				"телефон: 8 904 567 32 18, email: hairdresser.alina.hair@gmail.com",
-				"телефон: 89045673218, email: hairdresser.alina.hair@gmail.com",
-				"тел. 8 904 567 32 18, эл.почта hairdresser.alina.hair@gmail.com",
-				"тел. 89045673218, эл.почта hairdresser.alina.hair@gmail.com",
-				"тел. 7 (904) 567-32-18, эл.почта hairdresser.alina.hair@gmail.com",
-				"тел. +7 (904) 567-32-18, эл.почта hairdresser.alina.hair@gmail.com",
+				"+7 (904) 567-32-18, alina.hair.studio@gmail.com",
+				"телефон +7 (904) 567-32-18, электронная почта alina.hair.studio@gmail.com",
+				"+7 904 567 32 18, alina.hair.studio@gmail.com",
+				"телефон 7 (904) 567-32-18, email alina.hair.studio@gmail.com",
+				"телефон: 7 (904) 567-32-18, email: alina.hair.studio@gmail.com",
+				"телефон: +7 (904) 567-32-18, email: alina.hair.studio@gmail.com",
+				"телефон +7 (904) 567-32-18, email alina.hair.studio@gmail.com",
+				"89045673218, alina.hair.studio@gmail.com",
+				"8 904 567 32 18, alina.hair.studio@gmail.com",
+				"телефон 89045673218, электронная почта alina.hair.studio@gmail.com",
+				"телефон 8 904 567 32 18, электронная почта alina.hair.studio@gmail.com",
+				"телефон: 8 904 567 32 18, электронная почта: alina.hair.studio@gmail.com",
+				"телефон: 89045673218, электронная почта: alina.hair.studio@gmail.com",
+				"телефон: 8 904 567 32 18, email: alina.hair.studio@gmail.com",
+				"телефон: 89045673218, email: alina.hair.studio@gmail.com",
+				"тел. 8 904 567 32 18, эл.почта alina.hair.studio@gmail.com",
+				"тел. 89045673218, эл.почта alina.hair.studio@gmail.com",
+				"тел. 7 (904) 567-32-18, эл.почта alina.hair.studio@gmail.com",
+				"тел. +7 (904) 567-32-18, эл.почта alina.hair.studio@gmail.com",
 			],
 
 			// DOM elements
@@ -63,6 +60,8 @@ class HackHunter {
 			submitLiveID: "submitLiveButton",
 			submitWorkID: "submitWorkButton",
 			submitContactsID: "submitContactsButton",
+
+			endLevelID: "end-level",
 
 			resumePopupID: "resume-popup",
 			resumeOpenID: "resume-open",
@@ -85,20 +84,22 @@ class HackHunter {
 		this.submitWorkButton = document.getElementById(this.options.submitWorkID);
 		this.submitContactsButton = document.getElementById(this.options.submitContactsID);
 
+		this.endLevel = document.getElementById(this.options.endLevelID);
+
 		this.resumePopup = document.getElementById(this.options.resumePopupID);
 		this.openResume = document.getElementById(this.options.resumeOpenID);
 		this.closeResume = document.getElementById(this.options.resumeCloseID);
 
 		this.score = {
-			live: null,
-			work: null,
-			contact: null,
+			live: 0,
+			work: 0,
+			contact: 0,
 		};
 
 		this.submited = {
-			live: null,
-			work: null,
-			contact: null,
+			live: 0,
+			work: 0,
+			contact: 0,
 		};
 	}
 
@@ -152,65 +153,88 @@ class HackHunter {
 	formsListener() {
 		this.formLive.addEventListener("submit", (e) => {
 			e.preventDefault();
-			if (this.score.live == 15) {
+			const btn = e.target.querySelector(`#${this.options.submitLiveID}`);
+			if (this.score.live == 15 && btn) {
 				this.submited.live = 15;
 				this.textInputLive.classList.add("no-edit");
 				this.submitLiveButton.classList.add("no-edit");
+				this.checkWin();
+			} else {
+				const alertText = `Проверь свой ответ и попробуй ещё раз !`;
+				this.alertText(alertText, 1200);
 			}
-			this.checkWin();
 		});
 
 		this.formWork.addEventListener("submit", (e) => {
 			e.preventDefault();
-			if (this.score.work == 15) {
+			const btn = e.target.querySelector(`#${this.options.submitWorkID}`);
+			if (this.score.work == 15 && btn) {
 				this.submited.work = 15;
 				this.textInputWork.classList.add("no-edit");
 				this.submitWorkButton.classList.add("no-edit");
+				this.checkWin();
+			} else {
+				const alertText = `Проверь свой ответ и попробуй ещё раз !`;
+				this.alertText(alertText, 1200);
 			}
-			this.checkWin();
 		});
 
 		this.formContacts.addEventListener("submit", (e) => {
 			e.preventDefault();
-			if (this.score.contact == 10) {
+			const btn = e.target.querySelector(`#${this.options.submitContactsID}`);
+			if (this.score.contact == 10 && btn) {
 				this.submited.contact = 10;
 				this.textInputContacts.classList.add("no-edit");
 				this.submitContactsButton.classList.add("no-edit");
+				this.checkWin();
+			} else {
+				const alertText = `Проверь свой ответ и попробуй ещё раз !`;
+				this.alertText(alertText, 1200);
 			}
-			this.checkWin();
 		});
+
+		this.endLevel.addEventListener("click", () => {
+			this.end();
+		});
+	}
+
+	// End level
+	end() {
+		const sum = this.submited.live + this.submited.work + this.submited.contact;
+		this.addToLocalStorage(sum);
+		this.goToWinPage();
 	}
 
 	// Check if you win function
 	checkWin() {
 		const sum = this.submited.live + this.submited.work + this.submited.contact;
-		if (sum == 15) {
+		if (sum >= 10 && sum < 25) {
 			const alertText = `Вы собрали 1/3 необходимой информации. Так держать !`;
-			this.alertText(alertText, 1800);
+			this.alertText(alertText, 1200);
 			return;
 		}
-		if (sum == 30) {
+		if (sum >= 25 && sum < 40) {
 			const alertText = `Вы собрали 2/3 необходимой информации. Так держать !`;
-			this.alertText(alertText, 1800);
+			this.alertText(alertText, 1200);
 			return;
 		}
 		if (sum == 40) {
 			const alertText = `Вы собрали всю необходимую информации. Поздравляю !`;
-			this.alertText(alertText, 1800);
+			this.alertText(alertText, 1200);
 
-			this.addToLocalStorage(sum);		
+			this.addToLocalStorage(sum);
 			this.goToWinPage();
 		}
 	}
 
 	// Adding scores to browser memory
 	addToLocalStorage(sum) {
-		localStorage.setItem("level-3", sum);			
+		localStorage.setItem("level-3", sum);
 	}
 
 	// Redirect to win page
 	goToWinPage() {
-		window.location.href = "finish.html";		
+		window.location.href = "finish.html";
 	}
 
 	// Popup Open/Close Listener

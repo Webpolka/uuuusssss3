@@ -74,8 +74,7 @@ Extra styles for level 3
 
 		.btn-widget-3 {
 			border-radius: 40px;
-			padding: 10px 15px;
-			width: 150px;
+			padding: 10px 15px;			
 			height: 31px;
 			background: #7d2e3c;
 
@@ -85,9 +84,7 @@ Extra styles for level 3
 			letter-spacing: 0.03em;
 			color: #fff;
 			display: block;
-			margin-inline: auto;
-
-			margin-bottom: 20px;
+			margin-inline: auto;			
 			transition: background-color 1s ease-in-out;
 			&:active {
 				color: gray;
@@ -106,6 +103,8 @@ Extra styles for level 3
 			line-height: 120%;
 			text-align: center;
 			color: #7d2e3c;
+
+			margin-top: 20px;
 		}
 	}
 
@@ -114,11 +113,17 @@ Extra styles for level 3
 		opacity: 0.3; /* Делает элемент полупрозрачным */
 	}
 }
+.russian{
+	position: relative;
+	top: -5px;
+	width: 45px;
+	height: 45px;
+}
 .alertText {
 	position: fixed;
 	text-align: center;
 	text-transform: uppercase;
-	top: -100%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	opacity: 0;
@@ -139,8 +144,7 @@ Extra styles for level 3
 		font-size: 1.5rem;
 	}
 
-	&.active {
-		top: 50%;
+	&.active {	
 		opacity: 1;
 	}
 }
