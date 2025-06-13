@@ -205,7 +205,7 @@ class HackHunter {
 
 	// Adding scores to browser memory
 	addToLocalStorage(sum) {
-		localStorage.setItem("level-3", sum);		
+		localStorage.setItem("level-3", sum);			
 	}
 
 	// Redirect to win page

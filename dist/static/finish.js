@@ -4,20 +4,29 @@ document.addEventListener("DOMContentLoaded", function () {
 	let value2 = Number(localStorage.getItem("level-2"));
 	let value3 = Number(localStorage.getItem("level-3"));
 
-	let sum = value1 ? value1 : 0 + value2 ? value2 : 0 + value3 ? value3 : 0;
+	if (value1 == NaN) {
+		value1 = 0;
+	}
+	if (value2 == NaN) {
+		value2 = 0;
+	}
+	if (value3 == NaN) {
+		value3 = 0;
+	}
+
+	let sum = value1 + value2 + value3;
 
 	if (sum) {
 		results.innerHTML = sum;
 	} else {
 		results.innerHTML = 0;
 	}
-
-	// Если нужно очищать память браузера после игры то раскомментируй вызов функции
-	// resetLocalStorage();
+	// Если не нужно очищать память браузера после игры то закомментируй вызов функции
+	resetLocalStorage();
 
 	function resetLocalStorage() {
-		localStorage.setItem("level-1", null);
-		localStorage.setItem("level-2", null);
-		localStorage.setItem("level-3", null);
+		localStorage.setItem("level-1", 0);
+		localStorage.setItem("level-2", 0);
+		localStorage.setItem("level-3", 0);
 	}
 });
