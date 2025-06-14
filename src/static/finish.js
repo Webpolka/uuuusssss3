@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	localStorage.setItem("score", sum);
 	
-	// resetLevelsLocalStorage();
+	// закоментирууй resetLevelsLocalStorage чтобы не очищать память уровней по отдельности
+	resetLevelsLocalStorage();
+	
 	function resetLevelsLocalStorage() {
 		localStorage.setItem("level-1", 0);
 		localStorage.setItem("level-2", 0);
